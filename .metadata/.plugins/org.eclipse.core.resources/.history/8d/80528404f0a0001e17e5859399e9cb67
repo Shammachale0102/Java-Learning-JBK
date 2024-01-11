@@ -1,0 +1,37 @@
+package com.sham;
+
+public class CalculateGrossSalary {
+	public static void main(String[] args) {
+        // Creating a Scanner object to read input from the console
+        java.util.Scanner scanner = new java.util.Scanner(System.in);
+
+        // Accepting basic salary from the user
+        System.out.print("Enter Basic Salary: ");
+        double basicSalary = scanner.nextDouble();
+
+        // Calculating HRA and DA based on the given conditions
+        double hra, da;
+        if (basicSalary <= 10000) {
+            hra = 0.2 * basicSalary;
+            da = 0.8 * basicSalary;
+        } else if (basicSalary <= 20000) {
+            hra = 0.25 * basicSalary;
+            da = 0.9 * basicSalary;
+        } else {
+            hra = 0.3 * basicSalary;
+            da = 0.95 * basicSalary;
+        }
+
+        // Calculating gross salary
+        double grossSalary = basicSalary + hra + da;
+
+        // Displaying the result
+       
+        System.out.println("Basic Salary: " + basicSalary);
+        System.out.println("Gross Salary: " + grossSalary);
+
+        // Closing the scanner
+        scanner.close();
+    }
+}
+

@@ -1,0 +1,18 @@
+
+public class Person {
+     String name;
+     int age;
+
+    
+    public Person(String name, int age) {
+    	this.name = name;
+    	this.age = age;
+    }
+    
+   public static void main(String [] agrs) {
+	   Person s1 = new Person("sham", 21);
+	   Person s2 = new Person("rohit", 19);
+	   
+	   System.out.println(" s1:name-"+ s1.name+",age-"+s1.age);
+   }
+}
